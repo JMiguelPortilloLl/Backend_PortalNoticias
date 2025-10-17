@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\GUADALUPANO\\Periodico\\Periodico\\wwwroot\\uploads\\07bf83fc-a648-4e0b-ba96-7a646dcba71b.png",
+      "PackagePath": "staticwebassets\\uploads\\07bf83fc-a648-4e0b-ba96-7a646dcba71b.png"
+    },
+    {
+      "Id": "C:\\GUADALUPANO\\Periodico\\Periodico\\wwwroot\\uploads\\0b2d05ad-96d4-4186-8895-d0d373205e22.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0b2d05ad-96d4-4186-8895-d0d373205e22.jpg"
+    },
+    {
+      "Id": "C:\\GUADALUPANO\\Periodico\\Periodico\\wwwroot\\uploads\\585b0a7b-9b69-4cd6-9c94-9505ade1848c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\585b0a7b-9b69-4cd6-9c94-9505ade1848c.jpg"
+    },
+    {
+      "Id": "C:\\GUADALUPANO\\Periodico\\Periodico\\wwwroot\\uploads\\6bb686df-4b25-4019-b0dc-fb99e5f92509.png",
+      "PackagePath": "staticwebassets\\uploads\\6bb686df-4b25-4019-b0dc-fb99e5f92509.png"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.Periodico.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.Periodico.props",
+      "PackagePath": "build\\Periodico.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Periodico.props",
+      "PackagePath": "buildMultiTargeting\\Periodico.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.Periodico.props",
+      "PackagePath": "buildTransitive\\Periodico.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

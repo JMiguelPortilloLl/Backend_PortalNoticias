@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mssql6": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/Periodico20250630211540/providers/Microsoft.ServiceLinker/linkers/ConectionDefault_A3FB66229A",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/periodicodbserver2/databases/Periodico_db",
+      "type": "mssql.azure",
+      "connectionId": "ConectionDefault"
+    }
+  }
+}

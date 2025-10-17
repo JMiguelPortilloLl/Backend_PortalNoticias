@@ -1,0 +1,1653 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Periodico, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Categorias/ListarCategoriasActivos": {
+      "get": {
+        "tags": [
+          "Categorias"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Categoria"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Categorias": {
+      "get": {
+        "tags": [
+          "Categorias"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Categoria"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Categorias/{id}": {
+      "get": {
+        "tags": [
+          "Categorias"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Categoria"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Categorias"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Categorias/Actualizar": {
+      "put": {
+        "tags": [
+          "Categorias"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "descripcion",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Categorias/Crear": {
+      "post": {
+        "tags": [
+          "Categorias"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "descripcion",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Configuraciones/ListarConfiguracionActivos": {
+      "get": {
+        "tags": [
+          "Configuraciones"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Configuracion"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Configuraciones": {
+      "get": {
+        "tags": [
+          "Configuraciones"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Configuracion"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Configuraciones/{id}": {
+      "get": {
+        "tags": [
+          "Configuraciones"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Configuracion"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Configuraciones"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Configuraciones/Actualizar": {
+      "put": {
+        "tags": [
+          "Configuraciones"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "nombre",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "correo",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "telefono",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "direccion",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Configuraciones/Crear": {
+      "post": {
+        "tags": [
+          "Configuraciones"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "nombre",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "correo",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "telefono",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "direccion",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Detalle_Permisos/ListarDetallePermisosActivosUsuario": {
+      "get": {
+        "tags": [
+          "Detalle_Permisos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Detalle_Permiso"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Detalle_Permisos/ListarDetallePermisosActivos": {
+      "get": {
+        "tags": [
+          "Detalle_Permisos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Detalle_Permiso"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Detalle_Permisos": {
+      "get": {
+        "tags": [
+          "Detalle_Permisos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Detalle_Permiso"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Detalle_Permisos/{id}": {
+      "get": {
+        "tags": [
+          "Detalle_Permisos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Detalle_Permiso"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Detalle_Permisos"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Detalle_Permisos/Actualizar": {
+      "put": {
+        "tags": [
+          "Detalle_Permisos"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "idpermiso",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "idusuario",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Detalle_Permisos/Crear": {
+      "post": {
+        "tags": [
+          "Detalle_Permisos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AsignarPermisosRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Detalle_Permisos/ActualizarPermisos": {
+      "post": {
+        "tags": [
+          "Detalle_Permisos"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdatePermissionsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Permisos/ListarPermisosActivos": {
+      "get": {
+        "tags": [
+          "Permisos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Permiso"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Permisos": {
+      "get": {
+        "tags": [
+          "Permisos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Permiso"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Permisos/{id}": {
+      "get": {
+        "tags": [
+          "Permisos"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Permiso"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Permisos"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Permisos/Actualizar": {
+      "put": {
+        "tags": [
+          "Permisos"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "descripcion",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Permisos/Crear": {
+      "post": {
+        "tags": [
+          "Permisos"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "descripcion",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Publicaciones/ListarPorCategoria/{idCategoria}": {
+      "get": {
+        "tags": [
+          "Publicaciones"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "idCategoria",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "estado",
+            "type": "string",
+            "default": "Activo"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Publicacion"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Publicaciones/ListarPublicacionesActivos": {
+      "get": {
+        "tags": [
+          "Publicaciones"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Publicacion"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Publicaciones": {
+      "get": {
+        "tags": [
+          "Publicaciones"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Publicacion"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Publicaciones/{id}": {
+      "get": {
+        "tags": [
+          "Publicaciones"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Publicacion"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Publicaciones"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Publicaciones/Actualizar": {
+      "put": {
+        "tags": [
+          "Publicaciones"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "Titulo",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Descripcion",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Fecha",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "in": "formData",
+            "name": "idcategoria",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "Imagen",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Publicaciones/ActualizarSImg": {
+      "put": {
+        "tags": [
+          "Publicaciones"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "titulo",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "descripcion",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "fecha",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "idcategoria",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "imagen",
+            "type": "string",
+            "default": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Publicaciones/Crear": {
+      "post": {
+        "tags": [
+          "Publicaciones"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "Titulo",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Descripcion",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Fecha",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "in": "formData",
+            "name": "idusuario",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "idcategoria",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "formData",
+            "name": "Imagen",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Roles/ListarRolesActivos": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Rol"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Roles": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Rol"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Roles/{id}": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Rol"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Roles"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Roles/Actualizar": {
+      "put": {
+        "tags": [
+          "Roles"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "descripcion",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Roles/Crear": {
+      "post": {
+        "tags": [
+          "Roles"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "descripcion",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/UsuarioRoles/ListarUsuariosRolesActivos": {
+      "get": {
+        "tags": [
+          "UsuarioRoles"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UsuarioRol"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UsuarioRoles": {
+      "get": {
+        "tags": [
+          "UsuarioRoles"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UsuarioRol"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UsuarioRoles/{id}": {
+      "get": {
+        "tags": [
+          "UsuarioRoles"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UsuarioRol"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "UsuarioRoles"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/UsuarioRoles/Actualizar": {
+      "put": {
+        "tags": [
+          "UsuarioRoles"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "idrol",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "idusuario",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/UsuarioRoles/Crear": {
+      "post": {
+        "tags": [
+          "UsuarioRoles"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "idrol",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "idusuario",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/ListarUsuariosActivos": {
+      "get": {
+        "tags": [
+          "Usuarios"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Usuario"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Usuarios/{id}": {
+      "get": {
+        "tags": [
+          "Usuarios"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Usuario"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/Login": {
+      "get": {
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "nombreUsuario",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "password",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/Actualizar": {
+      "put": {
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "nombre",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "telefono",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "nombreusuario",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "password",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/Crear": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "nombre",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "telefono",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "nombreusuario",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "password",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AsignarPermisosRequest": {
+      "type": "object",
+      "properties": {
+        "idUsuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "permisos": {
+          "type": "array",
+          "items": {
+            "format": "int32",
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "Categoria": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        },
+        "publicaciones": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Publicacion"
+          }
+        }
+      }
+    },
+    "Configuracion": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "correo": {
+          "type": "string"
+        },
+        "telefono": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        }
+      }
+    },
+    "Detalle_Permiso": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "type": "string"
+        },
+        "idusuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "idpermiso": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Permiso": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        },
+        "detallePermisos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Detalle_Permiso"
+          }
+        }
+      }
+    },
+    "Publicacion": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "titulo": {
+          "type": "string"
+        },
+        "fecha": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "imagen": {
+          "type": "string"
+        },
+        "visualizacion": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "type": "string"
+        },
+        "idusuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "idcategoria": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Rol": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        },
+        "usuariosRoles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UsuarioRol"
+          }
+        }
+      }
+    },
+    "UpdatePermissionsRequest": {
+      "type": "object",
+      "properties": {
+        "idUsuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "addedPermissions": {
+          "type": "array",
+          "items": {
+            "format": "int32",
+            "type": "integer"
+          }
+        },
+        "removedPermissions": {
+          "type": "array",
+          "items": {
+            "format": "int32",
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "Usuario": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "telefono": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nombreUsuario": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "estado": {
+          "type": "string"
+        },
+        "publicaciones": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Publicacion"
+          }
+        },
+        "detallePermisos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Detalle_Permiso"
+          }
+        },
+        "usuariosRoles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UsuarioRol"
+          }
+        }
+      }
+    },
+    "UsuarioRol": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estado": {
+          "type": "string"
+        },
+        "idusuario": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "idrol": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
